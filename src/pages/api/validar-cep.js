@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     return res.status(200).json({
       success: true,
       result: {
-        cep: '75555000',
+        cep: '78890000',
         state: 'MT',
         city: 'Sorriso',
         neighborhood: '',
