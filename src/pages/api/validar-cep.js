@@ -6,6 +6,18 @@ export default async function handler(req, res) {
   }
 
   const { cep } = req.body;
+  if (cep === '78890000' || cep === '78890-000') {
+    return res.status(200).json({
+      success: true,
+      result: {
+        cep: '75555000',
+        state: 'MT',
+        city: 'Sorriso',
+        neighborhood: '',
+        street: '',
+      },
+    })
+  }
 
   try {
     const result = await cepPromise(cep);
